@@ -1,0 +1,9 @@
+[
+  {
+    "title": "Modbus to MQTT SparkplugB",
+    "description": "A Python-based IIoT edge application that reads Modbus registers, applies deadband filtering, buffers during outages, and publishes data using the SparkplugB protocol.",
+    "github": "https://github.com/jacob-ramirez-2020/modbus-mqtt-sparkplugb",
+    "demo": null,
+    "status": "Live demo TBA"
+  }
+]
