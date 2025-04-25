@@ -4,13 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Production | Jacob Ramirez Portfolio</title>
-    <h1 class="text-2xl font-bold">Production</h1>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#01A2D9',
+              accent: '#32FF00',
+              dark: '#121212',
+              muted: '#1E1E1E',
+            }
+          }
+        }
+      }
+    </script>
   </head>
-  <body class="bg-gray-900 text-white font-sans">
-    <header class="p-6 bg-gray-800 shadow-md">
+  <body class="bg-dark text-white font-sans">
+    <header class="p-6 bg-muted shadow-md">
       <div class="max-w-5xl mx-auto flex justify-between items-center">
-        <h1 class="text-2xl font-bold">Jacob Ramirez</h1>
+        <div class="flex items-center space-x-4">
+          <img src="assets/logo-placeholder.png" alt="Production Logo" class="h-10 w-10 rounded-full" />
+          <h1 class="text-2xl font-bold">Production</h1>
+        </div>
         <nav class="space-x-6">
           <a href="#about" class="hover:underline">About</a>
           <a href="#projects" class="hover:underline">Projects</a>
@@ -25,53 +42,46 @@
         <h2 class="text-4xl font-bold mb-4">SCADA Developer | IIoT Architect</h2>
         <p class="text-lg">I build scalable SCADA systems and custom IIoT products for industrial automation.</p>
         <div class="mt-6">
-          <a href="#projects" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded">View My Work</a>
+          <a href="#projects" class="bg-primary hover:bg-blue-700 px-4 py-2 rounded">View My Work</a>
           <a href="#resume" class="ml-4 border border-white px-4 py-2 rounded hover:bg-white hover:text-black">Download Resume</a>
         </div>
       </section>
 
       <section id="about" class="py-12">
-        <h3 class="text-2xl font-semibold mb-4">About Me</h3>
+        <h3 class="text-2xl font-semibold mb-4 text-primary">About Me</h3>
         <p>
-          I'm an experienced SCADA Developer and Industrial IoT Architect with over a decade of hands-on experience. 
-          From Ignition and MQTT to edge device firmware and remote networking, I specialize in building job-based automation systems 
+          I'm an experienced SCADA Developer and Industrial IoT Architect with over a decade of hands-on experience.
+          From Ignition and MQTT to edge device firmware and remote networking, I specialize in building job-based automation systems
           that scale and adapt to the unique challenges of industrial environments.
         </p>
       </section>
 
       <section id="projects" class="py-12">
-        <h3 class="text-2xl font-semibold mb-4">Projects</h3>
-        <ul class="space-y-4">
-          <li>
-            <h4 class="text-xl font-bold">MQTT SparkplugB Transmitter</h4>
-            <p>A Python-based transmitter that buffers and publishes MQTT data from edge devices using SparkplugB protocol.</p>
-          </li>
-          <li>
-            <h4 class="text-xl font-bold">SCADA Unified Namespace</h4>
-            <p>Designed a scalable UNS architecture using Ignition and MQTT for multi-job, multi-customer SCADA visibility.</p>
-          </li>
-          <li>
-            <h4 class="text-xl font-bold">Remote Camera Streaming</h4>
-            <p>Used FFmpeg and Peplink routers to stream live equipment video to YouTube via dynamic RTSP detection.</p>
+        <h3 class="text-2xl font-semibold mb-4 text-primary">Projects</h3>
+        <ul class="space-y-6">
+          <li class="bg-muted p-4 rounded shadow">
+            <h4 class="text-xl font-bold">Modbus to MQTT SparkplugB Transmitter</h4>
+            <p class="mb-2">An edge application written in Python that reads Modbus data, buffers during outages, and publishes using MQTT SparkplugB protocol.</p>
+            <a href="https://github.com/jacob-ramirez/modbus-mqtt-sparkplugb" class="text-accent underline" target="_blank">View on GitHub</a>
           </li>
         </ul>
       </section>
 
       <section id="resume" class="py-12">
-        <h3 class="text-2xl font-semibold mb-4">Resume</h3>
-        <p>You can <a href="resume.pdf" class="underline text-blue-400">download my resume here</a>.</p>
+        <h3 class="text-2xl font-semibold mb-4 text-primary">Resume</h3>
+        <p>You can <a href="resume.pdf" class="underline text-accent">download my resume here</a>.</p>
       </section>
 
       <section id="contact" class="py-12">
-        <h3 class="text-2xl font-semibold mb-4">Contact</h3>
-        <p>Email me at <a href="mailto:jacob.ramirez.2020@gmail.com" class="underline text-blue-400">jacob.ramirez.2020@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/jacob-ramirez-11420194/" class="underline text-blue-400" target="_blank">jacob-ramirez</a></p>
-        <p>GitHub: <a href="https://github.com/" class="underline text-blue-400" target="_blank">github.com/yourusername</a></p>
+        <h3 class="text-2xl font-semibold mb-4 text-primary">Contact</h3>
+        <p>Email me at <a href="mailto:jacob.ramirez.2020@gmail.com" class="underline text-accent">jacob.ramirez.2020@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/jacob-ramirez-11420194/" class="underline text-accent" target="_blank">jacob-ramirez</a></p>
+        <p>GitHub: <a href="https://github.com/jacob-ramirez" class="underline text-accent" target="_blank">jacob-ramirez</a></p>
       </section>
     </main>
 
-    <footer class="bg-gray-800 p-4 text-center text-sm text-gray-400">
-      &copy; 2025 Jacob Ramirez. All rights reserved.
+    <footer class="bg-muted p-4 text-center text-sm text-gray-400">
+      &copy; 2025 Production by Jacob Ramirez. All rights reserved.
     </footer>
   </body>
 </html>
