@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NextGenScadaProgrammer | Jacob Ramirez Portfolio</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script>
@@ -26,7 +26,7 @@
 
 <header class="bg-muted fixed w-full z-10 shadow">
   <nav class="max-w-6xl mx-auto px-4 py-4 flex justify-between">
-    <div class="text-primary font-bold text-xl">NextGenScadaProgrammer</div>
+    <a href="/" class="text-primary font-bold text-xl hover:underline">NextGenScadaProgrammer</a>
     <div class="space-x-6">
       <a href="#home" class="hover:text-primary">Home</a>
       <a href="#about" class="hover:text-primary">About</a>
@@ -59,11 +59,9 @@
       <div>
         <h3 class="text-2xl text-primary font-bold">Modbus to MQTT SparkplugB Gateway</h3>
         <p class="text-gray-400">Python-based industrial gateway that reads Modbus devices and transmits SparkplugB-compliant MQTT payloads. Configurable via web UI, supports buffering and deadband.</p>
-        <a href="https://www.nextgenscadaprogrammer.com/modbus-mqtt-sparkplugb/" target="_blank" class="text-accent hover:underline">View Project</a>
-      </div>
-      <div>
-        <h3 class="text-2xl text-primary font-bold">Automated Camera Streaming System</h3>
-        <p class="text-gray-400">Automated deployment of FFmpeg streams from SCADA-controlled edge devices to YouTube Live, integrated with MQTT status monitoring and recovery.</p>
+        <a href="https://github.com/jacob-ramirez-2020/modbus-mqtt-sparkplugb" target="_blank" class="text-accent hover:underline">
+          View Project
+        </a>
       </div>
       <div>
         <h3 class="text-2xl text-primary font-bold">Peplink SCADA Remote API Tools</h3>
@@ -78,8 +76,13 @@
 
   <section id="blog" data-aos="fade-up" class="py-12">
     <h2 class="text-3xl font-semibold mb-4">Latest Blog</h2>
-    <p class="text-gray-400 mb-2">Insights on SCADA, IIoT, and industrial automation:</p>
-    <a href="/blogs/" class="text-accent hover:underline">View Blog Posts</a>
+    <ul>
+      <li class="flex justify-between items-center">
+        <span class="text-primary font-bold">Computer Science Grad to SCADA Programmer</span>
+        <span class="text-gray-400 text-sm">Published: 2025</span>
+      </li>
+    </ul>
+    <a href="/blogs/" class="inline-block mt-4 text-accent hover:underline">View All Blog Posts →</a>
   </section>
 
   <section id="resume" data-aos="fade-up" class="py-12">
@@ -92,7 +95,10 @@
   <section id="contact" data-aos="fade-up" class="py-12">
     <h2 class="text-3xl font-semibold mb-4">Contact</h2>
     <p>Email: <a href="mailto:jacob.ramirez.2020@gmail.com" class="text-primary hover:underline">jacob.ramirez.2020@gmail.com</a></p>
-    <p>Phone: <a href="tel:+14324133271" class="text-primary hover:underline">432-413-3271</a></p>
+    <div class="flex space-x-6 mt-4">
+      <a href="https://www.linkedin.com/in/jacob-ramirez-11420194/" target="_blank" class="text-primary hover:underline">LinkedIn</a>
+      <a href="https://github.com/jacob-ramirez-2020" target="_blank" class="text-primary hover:underline">GitHub</a>
+    </div>
   </section>
 </main>
 
@@ -101,7 +107,9 @@
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>AOS.init();</script>
+<script>
+  AOS.init();
+</script>
 
 </body>
 </html>
