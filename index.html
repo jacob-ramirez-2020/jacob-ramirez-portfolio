@@ -1,72 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NextGenScadaProgrammer | Jacob Ramirez Portfolio</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: '#01A2D9',
-              accent: '#32FF00',
-              dark: '#121212',
-              muted: '#1E1E1E',
-            }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NextGenScadaProgrammer | Jacob Ramirez Portfolio</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#01A2D9',
+            accent: '#32FF00',
+            dark: '#121212',
+            muted: '#1E1E1E',
           }
         }
       }
-    </script>
-  </head>
-  <body class="bg-dark text-white font-sans">
-    <main class="max-w-4xl mx-auto px-4 py-12">
-      <!-- Header -->
-      <h1 class="text-4xl font-bold mb-4 text-primary">Jacob Ramirez</h1>
-      <p class="text-xl text-accent mb-6">SCADA Developer | IIoT Architect | Automation Specialist</p>
+    }
+  </script>
+</head>
+<body class="bg-dark text-white font-sans">
 
-      <!-- About Me -->
-      <section class="mb-10">
-        <h2 class="text-2xl font-semibold mb-2 text-white">About Me</h2>
-        <p class="text-gray-300 leading-relaxed">
-          I'm a SCADA developer with a background in computer science and a passion for Industrial IoT.
-          From Ignition SCADA to MQTT SparkplugB, I design scalable systems that bring modern cloud
-          architecture into the industrial world.
-        </p>
-      </section>
+<!-- Navbar -->
+<header class="bg-muted fixed w-full z-10 shadow">
+  <nav class="max-w-6xl mx-auto px-4 py-4 flex justify-between">
+    <div class="text-primary font-bold text-xl">NextGenScadaProgrammer</div>
+    <div class="space-x-6">
+      <a href="#home" class="hover:text-primary">Home</a>
+      <a href="#about" class="hover:text-primary">About</a>
+      <a href="#projects" class="hover:text-primary">Projects</a>
+      <a href="/blogs/" class="hover:text-primary">Blog</a>
+      <a href="#resume" class="hover:text-primary">Resume</a>
+      <a href="#contact" class="hover:text-primary">Contact</a>
+    </div>
+  </nav>
+</header>
 
-      <!-- Featured Project -->
-      <section class="mb-10">
-        <h2 class="text-2xl font-semibold mb-2 text-white">Featured Project</h2>
-        <p class="text-gray-300 leading-relaxed mb-2">
-          Explore my custom Modbus to MQTT SparkplugB gateway — a Python-based industrial data bridge designed
-          for remote edge deployments.
-        </p>
-        <a href="https://www.nextgenscadaprogrammer.com/modbus-mqtt-sparkplugb/"
-           class="inline-block mt-2 px-4 py-2 bg-primary text-black font-bold rounded hover:bg-accent transition"
-           target="_blank">
-          View Project
-        </a>
-      </section>
+<main class="pt-24 max-w-4xl mx-auto px-4">
 
-      <!-- Blog Posts -->
-      <section class="mb-10">
-        <h2 class="text-2xl font-semibold mb-2 text-white">Blog</h2>
-        <p class="text-gray-300 leading-relaxed mb-2">Latest thoughts on automation, SCADA, and edge computing:</p>
-        <ul class="list-disc pl-6 text-gray-400">
-          <li><a href="/blogs/about-me.html" class="text-primary hover:underline">Computer Science Grad to SCADA Programmer</a></li>
-          <!-- Future blog entries will load dynamically -->
-        </ul>
-      </section>
+  <!-- Hero -->
+  <section id="home" data-aos="fade-up" class="text-center py-12">
+    <h1 class="text-5xl font-bold text-primary mb-4">Jacob Ramirez</h1>
+    <p class="text-xl text-accent">SCADA Developer | IIoT Architect | Automation Specialist</p>
+  </section>
 
-      <!-- Contact -->
-      <section class="mb-4">
-        <h2 class="text-2xl font-semibold mb-2 text-white">Contact</h2>
-        <p class="text-gray-300">Email: <a href="mailto:jacob.ramirez.2020@gmail.com" class="text-primary hover:underline">jacob.ramirez.2020@gmail.com</a></p>
-        <p class="text-gray-300">Phone: <a href="tel:+14324133271" class="text-primary hover:underline">432-413-3271</a></p>
-      </section>
-    </main>
-  </body>
+  <!-- About -->
+  <section id="about" data-aos="fade-up" class="py-12">
+    <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+    <p class="text-gray-300 leading-relaxed">
+      I'm a SCADA Developer with a Computer Science background, specializing in building industrial IIoT systems that connect
+      field operations to enterprise-level insights. I focus on scalable architectures with MQTT Unified Namespace, Ignition SCADA,
+      custom Python-based telemetry solutions, and deploying resilient networking with Peplink routers and remote cellular solutions.
+    </p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" data-aos="fade-up" class="py-12">
+    <h2 class="text-3xl font-semibold mb-8">Projects</h2>
+
+    <div class="space-y-6">
+      <div>
+        <h3 class="text-2xl text-primary font-bold">Modbus to MQTT SparkplugB Gateway</h3>
+        <p class="text-gray-400">Python-based industrial gateway that reads Modbus devices and transmits SparkplugB-compliant MQTT payloads. Configurable via web UI, supports buffering and deadband.</p>
+        <a href="https://www.nextgenscadaprogrammer.com/modbus-mqtt-sparkplugb/" target="_blank" class="text-accent hover:underline">View Project</a>
+      </div>
+      <div>
+        <h3 class="text-2xl text-primary font-bold">Automated Camera Streaming System</h3>
+        <p class="text-gray-400">Automated deployment of FFmpeg streams from SCADA-controlled edge devices to YouTube Live, integrated with MQTT status monitoring and recovery.</p>
+      </div>
+      <div>
+        <h3 class="text-2xl text-primary font-bold">Peplink SCADA Remote API Tools</h3>
+        <p class="text-gray-400">Developed Ignition-based tools to remotely monitor WAN signal, reset cellular modules, and toggle PoE ports across field routers using Peplink API endpoints.</p>
+      </div>
+      <div>
+        <h3 class="text-2xl text-primary font-bold">Job-Based Asset KPI System</h3>
+        <p class="text-gray-400">Dynamic KPI calculations for runtime, utilization, MTTR, and flow efficiency published to MQTT UNS. Supports multi-job, multi-customer environments.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section id="blog" data-aos="fade-up" class="py-12">
+    <h2 class="text-3xl font-semibold mb-4">Latest Blog</h2>
+    <p class="text-gray-400 mb-2">Insights on SCADA, IIoT, and industrial automation:</p>
+    <a href="/blogs/" class="text-accent hover:underline">View Blog Posts</a>
+  </section>
+
+  <!-- Resume -->
+  <section id="resume" data-aos="fade-up" class="py-12">
+    <h2 class="text-3xl font-semibold mb-4">Resume</h2>
+    <a href="/Jacob_Ramirez_Resume_2025.pdf" download class="px-4 py-2 bg-primary text-black font-bold rounded hover:bg-accent transition">
+      Download My Resume
+    </a>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" data-aos="fade-up" class="py-12">
+    <h2 class="text-3xl font-semibold mb-4">Contact</h2>
+    <p>Email: <a href="mailto:jacob.ramirez.2020@gmail.com" class="text-primary hover:underline">jacob.ramirez.2020@gmail.com</a></p>
+    <p>Phone: <a href="tel:+14324133271" class="text-primary hover:underline">432-413-3271</a></p>
+  </section>
+
+</main>
+
+<footer class="bg-muted text-center py-4 text-gray-500 text-sm">
+  © 2025 Jacob Ramirez | NextGenScadaProgrammer
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
 </html>
