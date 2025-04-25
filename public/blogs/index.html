@@ -6,6 +6,7 @@
   <title>Blog | NextGenScadaProgrammer</title>
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
@@ -23,7 +24,22 @@
 </head>
 <body class="bg-dark text-white font-sans">
 
-<main class="max-w-4xl mx-auto px-4 py-12">
+<!-- Header -->
+<header class="bg-muted fixed w-full z-10 shadow">
+  <nav class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <a href="/" class="text-primary font-bold text-xl hover:underline">NextGenScadaProgrammer</a>
+    <div class="space-x-6 text-sm">
+      <a href="/" class="hover:text-primary">Home</a>
+      <a href="/#about" class="hover:text-primary">About</a>
+      <a href="/#projects" class="hover:text-primary">Projects</a>
+      <a href="/blogs/" class="hover:text-primary">Blog</a>
+      <a href="/#resume" class="hover:text-primary">Resume</a>
+      <a href="/#contact" class="hover:text-primary">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main class="pt-24 max-w-4xl mx-auto px-4 py-12">
   <h1 class="text-4xl font-bold text-primary mb-8">Blog</h1>
 
   <ul class="space-y-6">
@@ -39,6 +55,10 @@
     <a href="/" class="text-accent hover:underline">← Back to Home</a>
   </div>
 </main>
+
+<footer class="bg-muted text-center py-4 text-gray-500 text-sm mt-12">
+  © 2025 Jacob Ramirez | NextGenScadaProgrammer
+</footer>
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
