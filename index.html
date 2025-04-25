@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Production | Jacob Ramirez Portfolio</title>
+    <title>NextGenScadaProgrammer | Jacob Ramirez Portfolio</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -22,66 +22,51 @@
     </script>
   </head>
   <body class="bg-dark text-white font-sans">
-    <header class="p-6 bg-muted shadow-md">
-      <div class="max-w-5xl mx-auto flex justify-between items-center">
-        <div class="flex items-center space-x-4">
-          <img src="assets/logo-placeholder.png" alt="Production Logo" class="h-10 w-10 rounded-full" />
-          <h1 class="text-2xl font-bold">Production</h1>
-        </div>
-        <nav class="space-x-6">
-          <a href="#about" class="hover:underline">About</a>
-          <a href="#projects" class="hover:underline">Projects</a>
-          <a href="#resume" class="hover:underline">Resume</a>
-          <a href="#contact" class="hover:underline">Contact</a>
-        </nav>
-      </div>
-    </header>
+    <main class="max-w-4xl mx-auto px-4 py-12">
+      <!-- Header -->
+      <h1 class="text-4xl font-bold mb-4 text-primary">Jacob Ramirez</h1>
+      <p class="text-xl text-accent mb-6">SCADA Developer | IIoT Architect | Automation Specialist</p>
 
-    <main class="max-w-5xl mx-auto p-6">
-      <section class="text-center py-12">
-        <h2 class="text-4xl font-bold mb-4">SCADA Developer | IIoT Architect</h2>
-        <p class="text-lg">I build scalable SCADA systems and custom IIoT products for industrial automation.</p>
-        <div class="mt-6">
-          <a href="#projects" class="bg-primary hover:bg-blue-700 px-4 py-2 rounded">View My Work</a>
-          <a href="#resume" class="ml-4 border border-white px-4 py-2 rounded hover:bg-white hover:text-black">Download Resume</a>
-        </div>
-      </section>
-
-      <section id="about" class="py-12">
-        <h3 class="text-2xl font-semibold mb-4 text-primary">About Me</h3>
-        <p>
-          I'm an experienced SCADA Developer and Industrial IoT Architect with over a decade of hands-on experience.
-          From Ignition and MQTT to edge device firmware and remote networking, I specialize in building job-based automation systems
-          that scale and adapt to the unique challenges of industrial environments.
+      <!-- About Me -->
+      <section class="mb-10">
+        <h2 class="text-2xl font-semibold mb-2 text-white">About Me</h2>
+        <p class="text-gray-300 leading-relaxed">
+          I'm a SCADA developer with a background in computer science and a passion for Industrial IoT.
+          From Ignition SCADA to MQTT SparkplugB, I design scalable systems that bring modern cloud
+          architecture into the industrial world.
         </p>
       </section>
 
-      <section id="projects" class="py-12">
-        <h3 class="text-2xl font-semibold mb-4 text-primary">Projects</h3>
-        <ul class="space-y-6">
-          <li class="bg-muted p-4 rounded shadow">
-            <h4 class="text-xl font-bold">Modbus to MQTT SparkplugB Transmitter</h4>
-            <p class="mb-2">An edge application written in Python that reads Modbus data, buffers during outages, and publishes using MQTT SparkplugB protocol.</p>
-            <a href="https://github.com/jacob-ramirez-2020/modbus-mqtt-sparkplugb" class="text-accent underline" target="_blank">View on GitHub</a>
-          </li>
+      <!-- Featured Project -->
+      <section class="mb-10">
+        <h2 class="text-2xl font-semibold mb-2 text-white">Featured Project</h2>
+        <p class="text-gray-300 leading-relaxed mb-2">
+          Explore my custom Modbus to MQTT SparkplugB gateway — a Python-based industrial data bridge designed
+          for remote edge deployments.
+        </p>
+        <a href="https://www.nextgenscadaprogrammer.com/modbus-mqtt-sparkplugb/"
+           class="inline-block mt-2 px-4 py-2 bg-primary text-black font-bold rounded hover:bg-accent transition"
+           target="_blank">
+          View Project
+        </a>
+      </section>
+
+      <!-- Blog Posts -->
+      <section class="mb-10">
+        <h2 class="text-2xl font-semibold mb-2 text-white">Blog</h2>
+        <p class="text-gray-300 leading-relaxed mb-2">Latest thoughts on automation, SCADA, and edge computing:</p>
+        <ul class="list-disc pl-6 text-gray-400">
+          <li><a href="/blogs/about-me.html" class="text-primary hover:underline">Computer Science Grad to SCADA Programmer</a></li>
+          <!-- Future blog entries will load dynamically -->
         </ul>
       </section>
 
-      <section id="resume" class="py-12">
-        <h3 class="text-2xl font-semibold mb-4 text-primary">Resume</h3>
-        <p>You can <a href="resume.pdf" class="underline text-accent">download my resume here</a>.</p>
-      </section>
-
-      <section id="contact" class="py-12">
-        <h3 class="text-2xl font-semibold mb-4 text-primary">Contact</h3>
-        <p>Email me at <a href="mailto:jacob.ramirez.2020@gmail.com" class="underline text-accent">jacob.ramirez.2020@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/jacob-ramirez-11420194/" class="underline text-accent" target="_blank">jacob-ramirez</a></p>
-        <p>GitHub: <a href="https://github.com/jacob-ramirez" class="underline text-accent" target="_blank">jacob-ramirez</a></p>
+      <!-- Contact -->
+      <section class="mb-4">
+        <h2 class="text-2xl font-semibold mb-2 text-white">Contact</h2>
+        <p class="text-gray-300">Email: <a href="mailto:jacob.ramirez.2020@gmail.com" class="text-primary hover:underline">jacob.ramirez.2020@gmail.com</a></p>
+        <p class="text-gray-300">Phone: <a href="tel:+14324133271" class="text-primary hover:underline">432-413-3271</a></p>
       </section>
     </main>
-
-    <footer class="bg-muted p-4 text-center text-sm text-gray-400">
-      &copy; 2025 Production by Jacob Ramirez. All rights reserved.
-    </footer>
   </body>
 </html>
