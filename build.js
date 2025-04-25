@@ -16,9 +16,22 @@ const PARTIALS = {
 // Inject partials into a single HTML file
 function injectPartials(srcPath, destPath) {
   let html = fs.readFileSync(srcPath, 'utf8');
-  html = html.replace('<div id="head-placeholder"></div>', PARTIALS.head);
-  html = html.replace('<div id="header-placeholder"></div>', PARTIALS.header);
-  html = html.replace('<div id="footer-placeholder"></div>', PARTIALS.footer);
+// Instead of a plain string replace, do:
+html = html.replace(
+  /<div id="head-placeholder">\s*<\/div>/,
+  PARTIALS.head
+);
+
+// And similarly for header/footer:
+html = html.replace(
+  /<div id="header-placeholder">\s*<\/div>/,
+  PARTIALS.header
+);
+html = html.replace(
+  /<div id="footer-placeholder">\s*<\/div>/,
+  PARTIALS.footer
+);
+
   fs.mkdirSync(path.dirname(destPath), { recursive: true });
   fs.writeFileSync(destPath, html, 'utf8');
 }
