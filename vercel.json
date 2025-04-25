@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    {
-      "source": "/modbus-mqtt-sparkplugb/:match*",
-      "destination": "https://modbus-mqtt-sparkplugb.vercel.app/:match*"
-    }
-  ]
-}
