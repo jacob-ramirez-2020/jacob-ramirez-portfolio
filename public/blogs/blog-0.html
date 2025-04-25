@@ -6,14 +6,31 @@
   <title>Computer Science Grad to SCADA Programmer | NextGenScadaProgrammer</title>
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#01A2D9',
+            accent: '#32FF00',
+            dark: '#121212',
+            muted: '#1E1E1E',
+          }
+        }
+      }
+    }
+  </script>
 </head>
 <body class="bg-dark text-white font-sans">
 
 <main class="max-w-4xl mx-auto px-4 py-12">
-  <h1 class="text-4xl font-bold text-primary mb-4">Computer Science Grad to SCADA Programmer</h1>
-  <p class="text-gray-400 text-sm mb-8">Published: 2025</p>
+  <h1 class="text-4xl font-bold text-primary mb-4" data-aos="fade-up">
+    Computer Science Grad to SCADA Programmer
+  </h1>
+  <p class="text-gray-400 text-sm mb-8" data-aos="fade-up" data-aos-delay="100">Published: 2025</p>
 
-  <article class="space-y-4 leading-relaxed text-gray-300">
+  <article class="space-y-6 leading-relaxed text-gray-300" data-aos="fade-up" data-aos-delay="200">
     <p>Graduating with a degree in Computer Science doesn't mean you're locked into traditional software engineering roles. In fact, the industrial automation world desperately needs people who can bridge the gap between traditional control systems and modern software solutions.</p>
 
     <p>My journey from CS graduate to SCADA Developer opened doors in a niche but rapidly growing industry — Industrial IoT (IIoT). Understanding programming fundamentals gave me an advantage when working with PLCs, building MQTT infrastructures, deploying cloud SCADA systems, and scripting KPIs across field assets.</p>
@@ -24,9 +41,18 @@
   </article>
 
   <div class="mt-12">
-    <a href=\"/blogs/\" class=\"text-accent hover:underline\">← Back to Blog</a>
+    <a href="/blogs/" class="text-accent hover:underline">← Back to Blog</a>
   </div>
 </main>
+
+<footer class="bg-muted text-center py-4 text-gray-500 text-sm mt-12">
+  © 2025 Jacob Ramirez | NextGenScadaProgrammer
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 </body>
 </html>
