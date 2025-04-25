@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modbus to MQTT SparkplugB Gateway | NextGenScadaProgrammer</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#01A2D9',
+            accent: '#32FF00',
+            dark: '#121212',
+            muted: '#1E1E1E',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-dark text-white font-sans">
+
+<!-- Header (copy the updated nav here) -->
+<div id="header-placeholder"></div>
+  
+
+<main class="pt-24 max-w-5xl mx-auto px-4 py-12">
+  <section id="overview" class="text-center" data-aos="fade-up">
+    <h1 class="text-4xl font-bold text-primary mb-4">Modbus to MQTT SparkplugB Gateway</h1>
+    <p class="text-gray-300 leading-relaxed mb-6">
+      A Python-based Industrial IoT gateway application that reads data from Modbus devices (both RTU and TCP) and publishes real-time data using the SparkplugB MQTT protocol. Designed for remote deployments, it provides deadband filtering, automatic buffering on disconnection, and easy configuration management.
+    </p>
+    <a href="https://github.com/jacob-ramirez-2020/modbus-mqtt-sparkplugb" target="_blank" class="px-6 py-2 bg-primary text-black font-bold rounded hover:bg-accent transition">
+      View Full Project on GitHub
+    </a>
+  </section>
+
+  <section id="features" class="py-12" data-aos="fade-up">
+    <h2 class="text-3xl font-semibold mb-6 text-primary">Key Features</h2>
+    <ul class="list-disc list-inside space-y-2 text-gray-300">
+      <li>✅ Supports both Modbus RTU (RS485) and Modbus TCP (Ethernet/IP)</li>
+      <li>✅ Publishes SparkplugB-compliant MQTT payloads</li>
+      <li>✅ Deadband filtering to optimize network traffic</li>
+      <li>✅ Local buffering using SQLite database for store-and-forward</li>
+      <li>✅ Configurable via planned web-based UI (coming soon)</li>
+      <li>✅ Built-in diagnostics and runtime status monitoring</li>
+      <li>✅ Future plans for Docker deployment and dynamic configuration APIs</li>
+    </ul>
+  </section>
+
+  <section id="architecture" class="py-12" data-aos="fade-up">
+    <h2 class="text-3xl font-semibold mb-6 text-primary">System Architecture</h2>
+    <div class="flex justify-center">
+      <img src="/docs/assets/architecture_diagram.png" alt="System Architecture Diagram" class="rounded shadow-md max-w-full h-auto" />
+    </div>
+    <p class="text-center text-gray-400 text-sm mt-2">(Illustration of data flow from field Modbus devices to MQTT Broker.)</p>
+  </section>
+
+  <section id="roadmap" class="py-12" data-aos="fade-up">
+    <h2 class="text-3xl font-semibold mb-6 text-primary">Future Roadmap</h2>
+    <ul class="list-disc list-inside space-y-2 text-gray-300">
+      <li>⚙️ Launch web-based Configuration UI</li>
+      <li>⚙️ Add TLS client certificate upload support for MQTT security</li>
+      <li>⚙️ Expand protocol support to Siemens S7 and OPC-UA</li>
+      <li>⚙️ Add Docker deployment option</li>
+      <li>⚙️ Create Linux SystemD service configuration templates</li>
+    </ul>
+  </section>
+</main>
+
+<!-- Footer -->
+<div id="footer-placeholder"></div>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script>
+    // Inject header
+    fetch('/partials/header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+    
+    // Inject footer
+    fetch('/partials/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+    </script>
+</body>
+</html>
