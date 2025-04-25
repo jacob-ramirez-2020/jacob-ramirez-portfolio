@@ -1,34 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modbus to MQTT SparkplugB Gateway | NextGenScadaProgrammer</title>
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#01A2D9',
-            accent: '#32FF00',
-            dark: '#121212',
-            muted: '#1E1E1E',
-          }
-        }
-      }
-    }
-  </script>
-</head>
+<div id="head-placeholder"></div>
 <body class="bg-dark text-white font-sans">
 
 <!-- Header (copy the updated nav here) -->
 <div id="header-placeholder"></div>
   
 
-<main class="pt-24 max-w-5xl mx-auto px-4 py-12">
+<main class="pt-24 max-w-3xl mx-auto px-4 sm:px-6 md:px-8 py-12 leading-relaxed">
   <section id="overview" class="text-center" data-aos="fade-up">
     <h1 class="text-4xl font-bold text-primary mb-4">Modbus to MQTT SparkplugB Gateway</h1>
     <p class="text-gray-300 leading-relaxed mb-6">
@@ -75,24 +54,6 @@
 <!-- Footer -->
 <div id="footer-placeholder"></div>
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-<script>
-    // Inject header
-    fetch('/partials/header.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header-placeholder').innerHTML = data;
-      });
-    
-    // Inject footer
-    fetch('/partials/footer.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('footer-placeholder').innerHTML = data;
-      });
-    </script>
+<script src="/js/main.js"></script>
 </body>
 </html>
