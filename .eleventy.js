@@ -1,16 +1,14 @@
 module.exports = function(eleventyConfig) {
-  // Passthrough public folders to _site
-  eleventyConfig.addPassthroughCopy({ "public/js": "js" });
-  eleventyConfig.addPassthroughCopy({ "public/css": "css" });
-  eleventyConfig.addPassthroughCopy({ "public/partials": "partials" });
-  eleventyConfig.addPassthroughCopy({ "public/favicon.ico": "favicon.ico" });
+  // Passthrough static folders to public
+  eleventyConfig.addPassthroughCopy({ "static/js": "js" });
+  eleventyConfig.addPassthroughCopy({ "static/css": "css" });
+  eleventyConfig.addPassthroughCopy({ "static/partials": "partials" });
+  eleventyConfig.addPassthroughCopy({ "static/favicon.ico": "favicon.ico" });
 
   return {
     dir: {
       input: "src",
-      output: "_site"
-    },
-    passthroughFileCopy: true,
-    setUseGitIgnore: false
+      output: "public"   // <-- important: output into public now
+    }
   };
 };
