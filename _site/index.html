@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | NextGenScadaProgrammer</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#01A2D9',
+          accent: '#32FF00',
+          dark: '#121212',
+          muted: '#1E1E1E',
+        }
+      }
+    }
+  }
+</script>
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark text-white font-sans">
+  <header class="bg-muted shadow fixed w-full z-10">
+    <nav id="nav-links" class="flex justify-center space-x-8 py-4">
+      <a href="/" data-link="home" class="hover:text-accent">Home</a>
+      <a href="/projects/" data-link="my-projects" class="hover:text-accent">Projects</a>
+      <a href="/blogs/" data-link="blog" class="hover:text-accent">Blog</a>
+    </nav>
+  </header>
+
+  <main id="page-content" class="pt-24 max-w-3xl mx-auto px-4 sm:px-6 md:px-8 py-12 leading-relaxed">
+    <section id="home" data-aos="fade-up" class="text-center py-12">
+  <h1 class="text-5xl font-bold text-primary mb-4">Jacob Ramirez</h1>
+  <p class="text-xl text-accent">SCADA Developer | IIoT Architect | Automation Specialist</p>
+</section>
+<section id="about" data-aos="fade-up" class="py-12">
+  <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+  <p class="text-gray-300 leading-relaxed">
+    I'm a SCADA Developer with a Computer Science background, specializing in building industrial IIoT systems that connect
+    field operations to enterprise-level insights. I focus on scalable architectures with MQTT Unified Namespace, Ignition SCADA,
+    custom Python-based telemetry solutions, and deploying resilient networking with Peplink routers and remote cellular solutions.
+  </p>
+</section>
+<section id="projects" data-aos="fade-up" class="py-12">
+  <h2 class="text-3xl font-semibold mb-8">Projects</h2>
+  <div class="space-y-6">
+    <div>
+      <h3 class="text-2xl text-primary font-bold">Modbus to MQTT SparkplugB Gateway</h3>
+      <p class="text-gray-400">Python-based industrial gateway that reads Modbus devices and transmits SparkplugB-compliant MQTT payloads. Configurable via web UI, supports buffering and deadband.</p>
+      <a href="/projects/" class="inline-block mt-4 px-6 py-2 bg-primary text-black font-bold rounded hover:bg-accent transition">
+        View Project
+      </a>               
+    </div>
+  </div>
+</section>
+<section id="blog" data-aos="fade-up" class="py-12">
+  <h2 class="text-3xl font-semibold mb-4">Latest Blog</h2>
+  <ul>
+    <li class="flex justify-between items-center">
+      <a href="/blogs/blog-0/" class="text-primary font-bold hover:underline">
+        Computer Science Grad to SCADA Programmer
+      </a>
+      <span class="text-gray-400 text-sm">Published: 2025</span>
+    </li>
+  </ul>
+  <a href="/blogs/" class="inline-block mt-4 text-accent hover:underline">View All Blog Posts →</a>
+</section>
+<section id="resume" data-aos="fade-up" class="py-12">
+  <h2 class="text-3xl font-semibold mb-4">Resume</h2>
+  <a href="/Jacob_Ramirez_Resume_2025.pdf" download class="px-4 py-2 bg-primary text-black font-bold rounded hover:bg-accent transition">
+    Download My Resume
+  </a>
+</section>
+<section id="contact" data-aos="fade-up" class="py-12">
+  <h2 class="text-3xl font-semibold mb-4">Contact</h2>
+  <p>Email: <a href="mailto:jacob.ramirez.2020@gmail.com" class="text-primary hover:underline">jacob.ramirez.2020@gmail.com</a></p>
+  <div class="flex space-x-6 mt-4">
+    <a href="https://www.linkedin.com/in/jacob-ramirez-11420194/" target="_blank" class="text-primary hover:underline">LinkedIn</a>
+    <a href="https://github.com/jacob-ramirez-2020" target="_blank" class="text-primary hover:underline">GitHub</a>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="text-center py-6 border-t border-muted">
+    <p class="text-gray-500">&copy; 2025 Jacob Ramirez. All rights reserved.</p>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    if (typeof AOS !== 'undefined') {
+      AOS.init();
+    }
+  </script>
+</body>
+</html>
