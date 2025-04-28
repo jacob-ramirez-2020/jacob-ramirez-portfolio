@@ -18,7 +18,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # serve your site
       - name: Serve public/ with 404-on-directory
         run: |
           cat > serve_with_404.py << 'EOF'
@@ -36,21 +35,22 @@ jobs:
           chmod +x serve_with_404.py
           python3 serve_with_404.py & sleep 2
 
-      # install and immediately run Lychee CLI
-      - name: Install & Run Lychee over HTTP
+      - name: Install Lychee CLI
         run: |
-          # 1) create a local bin dir and put it on PATH
           mkdir -p "$HOME/.local/bin"
-          export PATH="$HOME/.local/bin:$PATH"
-
-          # 2) download and extract the latest Lychee binary
           ARCH=$(uname -m)
+          # Download the latest tagged release
           LATEST=$(curl -sL https://api.github.com/repos/lycheeverse/lychee/releases/latest \
                    | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
           curl -sfL "https://github.com/lycheeverse/lychee/releases/download/${LATEST}/lychee-${ARCH}-unknown-linux-gnu.tar.gz" \
             | tar -xz -C "$HOME/.local/bin" --strip-components=1
+          chmod +x "$HOME/.local/bin/lychee"
+          # Make this dir available on PATH for subsequent steps
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
 
-          # 3) run Lychee in HTTP mode against your local server
+      - name: Run Lychee over HTTP
+        run: |
+          # Now $HOME/.local/bin is on PATH automatically
           lychee \
             --mode http \
             --timeout 30 \
