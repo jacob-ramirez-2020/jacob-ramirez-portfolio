@@ -1,10 +1,17 @@
 name: CI
 
 on:
-  push:
-    branches: [ main, production ]
-  pull_request:
-    branches: [ main, production ]
+    push:
+      branches:
+        - production
+        - staging
+        - 'feature/**'
+    pull_request:
+      branches:
+        - production
+        - staging
+        - 'feature/**'
+  
 
 jobs:
   build:
