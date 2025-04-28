@@ -19,12 +19,18 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Validate links in HTML
+      - name: Serve public/ on localhost:8080
+        run: |
+          # start a simple HTTP server in the background
+          python3 -m http.server 8080 --directory public &
+          # give it a moment to start
+          sleep 2
+
+      - name: Validate links via HTTP
         uses: lycheeverse/lychee-action@v2.4.0
         with:
           args: >
             --timeout 30
-            --base public
             --verbose
-            --include-fragments
-            public
+            --base-url http://localhost:8080/
+            http://localhost:8080/
