@@ -38,7 +38,7 @@ jobs:
           sleep 2
 
       - name: Validate links via HTTP
-        uses: lycheeverse/lychee-action@v1.11.0
+        uses: lycheeverse/lychee-action@v2
         with:
           checkbox: false        # disable GitHub-checkbox output so --mode can be used
           args: >
