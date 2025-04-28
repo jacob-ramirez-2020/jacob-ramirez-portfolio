@@ -1,0 +1,66 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, production ]
+  pull_request:
+    branches: [ main, production ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Build CSS
+      run: npm run build:css
+
+    - name: Build Eleventy
+      run: npm run build
+
+    # ─────────────────────────────────────────────────────────────────────────────
+    #  Link check
+    # ─────────────────────────────────────────────────────────────────────────────
+    - name: Install Linkinator
+      run: npm install --save-dev linkinator
+
+    - name: Catch broken links
+      run: npx linkinator ./public --recursive --silent
+      # will exit non-zero if any link returns 404 or times out
+
+    # ─────────────────────────────────────────────────────────────────────────────
+    #  Spell check
+    # ─────────────────────────────────────────────────────────────────────────────
+    - name: Run Spell Check
+      uses: check-spelling/check-spelling@v0.21.0
+      with:
+        # directories/files to check; adjust to your content
+        files: |
+          src/**/*.md
+          src/**/*.njk
+          src/**/*.html
+        # you can customize accepted words in .github/spelling.yml
+
+    # ─────────────────────────────────────────────────────────────────────────────
+    #  Super-Linter for everything else
+    # ─────────────────────────────────────────────────────────────────────────────
+    - name: Run Super-Linter
+      uses: github/super-linter@v6
+      env:
+        VALIDATE_HTML: true
+        VALIDATE_MARKDOWN: true
+        VALIDATE_YAML: true
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
