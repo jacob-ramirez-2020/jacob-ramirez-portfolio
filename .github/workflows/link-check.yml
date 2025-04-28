@@ -26,4 +26,5 @@ jobs:
             --timeout 30
             --base public
             --verbose
+            --include-fragments
             public
