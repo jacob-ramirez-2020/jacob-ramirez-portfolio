@@ -20,7 +20,8 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run Spell Checker
-        uses: check-spelling/check-spelling@v0.0.20
+        uses: check-spelling/check-spelling@v0.0.24
         with:
           # point at your spelling config (optional)
+          checkout: false
           config_path: .github/check-spelling.yml

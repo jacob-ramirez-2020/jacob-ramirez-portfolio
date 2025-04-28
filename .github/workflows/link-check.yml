@@ -25,6 +25,5 @@ jobs:
           args: >
             --timeout 30
             --base public
-            --recursive
             --verbose
-            "./public/**/*.html"
+            public
