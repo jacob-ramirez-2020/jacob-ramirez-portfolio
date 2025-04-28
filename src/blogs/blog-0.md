@@ -1,5 +1,5 @@
 ---
-layout: layouts/base.njk
+layout: base.njk
 title: Computer Science Grad to SCADA Programmer
 ---
 

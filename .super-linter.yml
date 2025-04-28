@@ -1,0 +1,17 @@
+# .super-linter.yml
+# Tell Super-Linter which patterns to ignore entirely:
+exclude:
+  - "src/_includes/**"
+  - "static/**"
+  - "public/**"
+  - "node_modules/**"
+
+# Now disable just the HTMLHint rules that clash with Tailwind & Eleventy:
+linters:
+  html:
+    disable:
+      - doctype-first       # we're always generating <!doctype html>
+      - head-script-disabled # we need our <script>tailwind.config…</script> in <head>
+      - id-class-value       # Tailwind’s utility classes don’t follow “lowercase-dash-only”
+      - title-require        # layouts handle <title> for every page
+      - spec-char-escape     # allow “&” in your content like “oil & gas”

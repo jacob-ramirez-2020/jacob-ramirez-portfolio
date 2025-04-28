@@ -1,0 +1,15 @@
+{
+  "excludeFiles": [
+    "src/_includes/**",
+    "static/**",
+    "_site/partials/**",
+    "node_modules/**"
+  ],
+  "rules": {
+    "doctype-first": false,
+    "head-script-disabled": false,
+    "id-class-value": false,
+    "title-require": false,
+    "spec-char-escape": false
+  }
+}
