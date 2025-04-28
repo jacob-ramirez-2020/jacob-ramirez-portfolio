@@ -16,20 +16,25 @@ jobs:
   link-check:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Install local HTTP server
+      - name: Serve public/ with 404-on-directory
         run: |
-          # initialize a minimal package.json so npm won't complain
-          npm init -y
-          # install the "serve" static‐file server locally
-          npm install serve --no-save
+          cat > serve_with_404.py << 'EOF'
+          #!/usr/bin/env python3
+          import os
+          from http.server import HTTPServer, SimpleHTTPRequestHandler
 
-      - name: Serve public/ on localhost:8080
-        run: |
-          # "-s" means single‐page fallback off (so missing paths 404)
-          npx serve public -l 8080 --no-clipboard &
+          class NoDirListing(SimpleHTTPRequestHandler):
+              def list_directory(self, path):
+                  self.send_error(404, "Not Found")
+
+          os.chdir('public')
+          HTTPServer(('0.0.0.0', 8080), NoDirListing).serve_forever()
+          EOF
+
+          chmod +x serve_with_404.py
+          python3 serve_with_404.py &
           sleep 2
 
       - name: Validate links via HTTP
