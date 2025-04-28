@@ -1,0 +1,26 @@
+name: Link Check
+
+on:
+  push:
+    branches:
+      - 'feature/**'
+      - staging
+      - Production
+  pull_request:
+    branches:
+      - 'feature/**'
+      - staging
+      - Production
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Validate links in HTML
+        # using Lychee (fast HTTP link checker)
+        uses: lycheeverse/lychee-action@v1
+        with:
+          args: --timeout 30 --recursive public
