@@ -3,12 +3,12 @@ name: Link Check
 on:
   push:
     branches:
-      - 'feature/**'
+      - feature/**
       - staging
       - Production
   pull_request:
     branches:
-      - 'feature/**'
+      - feature/**
       - staging
       - Production
 
@@ -16,7 +16,13 @@ jobs:
   link-check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install & build site
+        run: |
+          npm ci
+          npm run build       # builds into ./public
 
       - name: Serve public/ with 404-on-directory
         run: |
@@ -27,33 +33,15 @@ jobs:
 
           class NoDirListing(SimpleHTTPRequestHandler):
               def list_directory(self, path):
+                  # Always 404 when no index.html
                   self.send_error(404, "Not Found")
 
           os.chdir('public')
           HTTPServer(('0.0.0.0', 8080), NoDirListing).serve_forever()
           EOF
-          chmod +x serve_with_404.py
           python3 serve_with_404.py & sleep 2
 
-      - name: Install Lychee CLI
+      - name: Check links with Linkinator
         run: |
-          mkdir -p "$HOME/.local/bin"
-          ARCH=$(uname -m)
-          # Download the latest tagged release
-          LATEST=$(curl -sL https://api.github.com/repos/lycheeverse/lychee/releases/latest \
-                   | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
-          curl -sfL "https://github.com/lycheeverse/lychee/releases/download/${LATEST}/lychee-${ARCH}-unknown-linux-gnu.tar.gz" \
-            | tar -xz -C "$HOME/.local/bin" --strip-components=1
-          chmod +x "$HOME/.local/bin/lychee"
-          # Make this dir available on PATH for subsequent steps
-          echo "$HOME/.local/bin" >> $GITHUB_PATH
-
-      - name: Run Lychee over HTTP
-        run: |
-          # Now $HOME/.local/bin is on PATH automatically
-          lychee \
-            --mode http \
-            --timeout 30 \
-            --verbose \
-            --base http://localhost:8080/ \
-            http://localhost:8080/
+          # Crawl over HTTP and fail on any broken link
+          npx linkinator http://localhost:8080 --recursive --silent
