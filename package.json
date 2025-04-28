@@ -4,6 +4,7 @@
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy --output=public",
+    "dev": "eleventy --serve",
     "postinstall": "npm install -g @11ty/eleventy"
   },
   "devDependencies": {
