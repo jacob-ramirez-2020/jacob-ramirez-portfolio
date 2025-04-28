@@ -40,9 +40,11 @@ jobs:
       - name: Validate links via HTTP
         uses: lycheeverse/lychee-action@v2.4.0
         with:
+          checkbox: false        # disable GitHub-checkbox output so --mode can be used
           args: >
             --mode http
             --timeout 30
             --verbose
             --base http://localhost:8080/
             http://localhost:8080/
+        
