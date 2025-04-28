@@ -23,7 +23,7 @@ title: Home
     <div>
       <h3 class="text-2xl text-primary font-bold">Modbus to MQTT SparkplugB Gateway</h3>
       <p class="text-gray-400">Python-based industrial gateway that reads Modbus devices and transmits SparkplugB-compliant MQTT payloads. Configurable via web UI, supports buffering and deadband.</p>
-      <a href="/projects/" class="inline-block mt-4 px-6 py-2 bg-primary text-black font-bold rounded hover:bg-accent transition">
+      <a href="/projects/modbus-mqtt-sparkplugb/" class="inline-block mt-4 px-6 py-2 bg-primary text-black font-bold rounded hover:bg-accent transition">
         View Project
       </a>               
     </div>
