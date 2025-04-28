@@ -23,8 +23,8 @@ jobs:
         uses: lycheeverse/lychee-action@v2.4.0
         with:
           args: >
-            --base public                     # resolve “/…” to public/
-            --recursive                       # crawl links within the input roots
-            --verbose                         # list each file + link it checks
-            './public/**/*.html'              # only check HTML under public/
-
+            --timeout 30
+            --base public
+            --recursive
+            --verbose
+            "./public/**/*.html"
