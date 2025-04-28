@@ -34,3 +34,18 @@ jobs:
             --verbose
             --base http://localhost:8080/
             http://localhost:8080/
+            - name: Install a proper static server
+            run: |
+              npm install -g serve-handler http-server
+          
+      - name: Serve public/ on localhost:8080 (404 on missing files)
+        run: |
+          node -e "
+            import http from 'http';
+            import serveHandler from 'serve-handler';
+            http.createServer((req, res) => {
+              serveHandler(req, res, { public: 'public' });
+            }).listen(8080);
+          " &
+          sleep 2
+          
