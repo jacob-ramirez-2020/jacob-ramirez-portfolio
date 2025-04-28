@@ -1,0 +1,10 @@
+version: 0.3
+
+# Which dictionaries to use
+dictionaries:
+  - en_US
+
+# Words or patterns to ignore
+ignore:
+  - NextGenScadaProgrammer
+  - jacob.ramirez.2020@gmail.com

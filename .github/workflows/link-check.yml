@@ -20,7 +20,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Validate links in HTML
-        # using Lychee (fast HTTP link checker)
-        uses: lycheeverse/lychee-action@v1
+        uses: lycheeverse/lychee-action@v2.4.0
         with:
-          args: --timeout 30 --recursive public
+          args: >
+            --base public                     # resolve “/…” to public/
+            --recursive                       # crawl links within the input roots
+            --verbose                         # list each file + link it checks
+            './public/**/*.html'              # only check HTML under public/
+
