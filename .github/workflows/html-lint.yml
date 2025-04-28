@@ -1,6 +1,5 @@
 name: Lint HTML
 
-# run on pushes and PRs to staging/production/feature branches
 on:
   push:
     branches:
@@ -14,17 +13,22 @@ on:
 
 jobs:
   html-lint:
-    name: HTML Lint
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      # 1) Fetch all history (so branches exist)
+      - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
+      # 2) Explicitly fetch the default branch
+      - name: Fetch Production branch
+        run: git fetch origin Production:Production
+
+      # 3) Run the linter
       - name: Run HTML validator
         uses: github/super-linter@v6
         env:
-          DEFAULT_WORKSPACE: ${{ github.workspace }}
+          VALIDATE_HTML: true
+          VALIDATE_XHTML: false
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VALIDATE_HTML: true        # enable HTML validation
-          VALIDATE_XHTML: false      # disable XHTML if you don’t need it
-          LINTER_RULES_PATH: ""      # optional: custom rules
