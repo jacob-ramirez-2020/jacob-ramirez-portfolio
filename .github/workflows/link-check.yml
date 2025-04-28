@@ -1,0 +1,47 @@
+name: Link Check
+
+on:
+  push:
+    branches:
+      - feature/**
+      - staging
+      - Production
+  pull_request:
+    branches:
+      - feature/**
+      - staging
+      - Production
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install & build site
+        run: |
+          npm ci
+          npm run build       # builds into ./public
+
+      - name: Serve public/ with 404-on-directory
+        run: |
+          cat > serve_with_404.py << 'EOF'
+          #!/usr/bin/env python3
+          import os
+          from http.server import HTTPServer, SimpleHTTPRequestHandler
+
+          class NoDirListing(SimpleHTTPRequestHandler):
+              def list_directory(self, path):
+                  # Always 404 when no index.html
+                  self.send_error(404, "Not Found")
+
+          os.chdir('public')
+          HTTPServer(('0.0.0.0', 8080), NoDirListing).serve_forever()
+          EOF
+          python3 serve_with_404.py & sleep 2
+
+      - name: Check links with Linkinator
+        run: |
+          # Crawl over HTTP and fail on any broken link
+          npx linkinator http://localhost:8080 --recursive --silent

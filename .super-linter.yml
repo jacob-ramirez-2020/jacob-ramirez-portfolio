@@ -1,0 +1,15 @@
+# .super-linter.yml
+exclude:
+  - "static/**"
+  - "public/**"
+  - "src/_includes/**"
+  - "node_modules/**"
+
+linters:
+  html:
+    disable:
+      - doctype-first
+      - head-script-disabled
+      - id-class-value
+      - title-require
+      - spec-char-escape
