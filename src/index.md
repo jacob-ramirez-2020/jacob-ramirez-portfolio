@@ -20,6 +20,14 @@ title: Home
   <p class="text-gray-300 leading-relaxed italic">
     Always building. Always learning. Always improving.
   </p>
+  <div class="mt-8">
+  <a href="/aboutme/" class="inline-block mt-4 px-6 py-2 bg-primary text-black font-bold rounded hover:bg-accent transition">
+    Read More About Me
+    <span class="transform transition-transform duration-300 group-hover:translate-x-1">→</span>
+  </a>
+  </div>
+
+
 </section>
 
 
