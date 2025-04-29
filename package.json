@@ -2,17 +2,11 @@
   "name": "jacob-ramirez-portfolio",
   "version": "1.0.0",
   "scripts": {
-  "build": "eleventy --output=public",
-  "start": "eleventy --serve",
-  "dev":   "eleventy --serve",
-  "check:links": "linkinator ./public --recursive --silent",
-  "postinstall": "npm install -g @11ty/eleventy"
-},
-
-  
-  "dependencies": {
-    "postcss-cli":   "^11.0.1",
-    "autoprefixer":  "^10.4.21"
+    "start": "eleventy --serve",
+    "dev": "eleventy --serve",
+    "build": "eleventy --output=public",
+    "check:links": "linkinator ./public --recursive --silent",
+    "postinstall": "npm install -g @11ty/eleventy"
   },
   
   "devDependencies": {
