@@ -8,8 +8,12 @@
     "check:links": "linkinator ./public --recursive --silent",
     "postinstall": "npm install -g @11ty/eleventy"
   },
+  
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
-    "linkinator": "^6.1.2"
+    "@tailwindcss/postcss": "^4.1.4",
+    "linkinator": "^6.1.2",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.4"
   }
 }
