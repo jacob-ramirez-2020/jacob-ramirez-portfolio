@@ -20,7 +20,6 @@ title: Home
     <li><strong>Ignition SCADA:</strong> Ignition Gold Certified—building two-server deployments on Azure & AWS with secure OT/IT segmentation.</li>
     <li><strong>Custom Python Telemetry:</strong> Developing Modbus-to-MQTT gateways with buffering, deadband logic, and automated KPI dashboards.</li>
     <li><strong>Resilient Networking:</strong> Deploying and managing 100+ Peplink MAX routers for cellular-backed remote access, with API-driven health monitoring.</li>
-    <li><strong>Security & Compliance:</strong> Applying ISA/IEC 62443 best practices, TLS certificate management, and environment-variable–driven secrets.</li>
   </ul>
 
   <p class="text-gray-300 leading-relaxed">

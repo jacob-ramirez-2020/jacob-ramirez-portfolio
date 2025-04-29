@@ -2,20 +2,14 @@
   "name": "jacob-ramirez-portfolio",
   "version": "1.0.0",
   "scripts": {
-    "build:css": "tailwindcss -i src/styles/style.css -o static/css/style.css --minify",
-    "start": "npm run build:css && eleventy --serve",
-    "dev": "npm run build:css && eleventy --serve",
-    "build": "npm run build:css && eleventy --output=public",
+    "start": "eleventy --serve",
+    "dev": "eleventy --serve",
+    "build": "eleventy --output=public",
     "check:links": "linkinator ./public --recursive --silent",
     "postinstall": "npm install -g @11ty/eleventy"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
-    "@tailwindcss/postcss": "^4.1.4",
-    "autoprefixer": "^10.4.21",
-    "linkinator": "^6.1.2",
-    "postcss": "^8.5.3",
-    "postcss-cli": "^11.0.1",
-    "tailwindcss": "^4.1.4"
+    "linkinator": "^6.1.2"
   }
 }
