@@ -17,9 +17,9 @@ title: Home
     I specialize in building next-generation industrial systems that are scalable, secure, and future-ready. With a foundation in Computer Science and a decade of experience in automation, networking, and cloud integration, I deliver solutions that bridge field operations and enterprise systems with cutting-edge technologies like MQTT UNS and IIoT edge devices.
   </p>
   <br>
-  <p class="text-gray-300 leading-relaxed"><b>
-  I'm always building, always learning, always improving.
-  </b></p>
+  <p class="text-gray-300 leading-relaxed italic">
+    Always building. Always learning. Always improving.
+  </p>
 </section>
 
 
