@@ -1,0 +1,19 @@
+# .github/workflows/cleanup-feature-branches.yml
+name: Delete merged-to-Production branches
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - Production    # only react when PR target is Production
+
+jobs:
+  delete_branch:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete the feature branch
+        uses: devops-infra/action-delete-branch@v0.3.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.event.pull_request.head.ref }}
