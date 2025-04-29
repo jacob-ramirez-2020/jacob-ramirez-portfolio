@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | NextGenScadaProgrammer</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#01A2D9',
+          accent: '#32FF00',
+          dark: '#121212',
+          muted: '#1E1E1E',
+        }
+      }
+    }
+  }
+</script>
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark text-white font-sans">
+  <header class="bg-muted shadow fixed w-full z-10">
+    <nav id="nav-links" class="flex justify-center space-x-8 py-4">
+      <a href="/" data-link="home" class="hover:text-accent">Home</a>
+      <a href="/projects/" data-link="my-projects" class="hover:text-accent">Projects</a>
+      <a href="/blogs/" data-link="blog" class="hover:text-accent">Blog</a>
+    </nav>
+  </header>
+
+  <main id="page-content" class="pt-24 max-w-3xl mx-auto px-4 sm:px-6 md:px-8 py-12 leading-relaxed">
+    <section class="py-12" data-aos="fade-up">
+  <h1 class="text-4xl font-bold mb-8 text-primary">Blog Posts</h1>
+  <ul class="space-y-6">
+    <li>
+      <a href="/blogs/blog-0/" class="text-2xl text-accent font-semibold hover:underline">Computer Science Grad to SCADA Programmer</a>
+      <p class="text-gray-400 text-sm">Published: 2025</p>
+    </li>
+  </ul>
+</section>
+
+  </main>
+
+  <footer class="text-center py-6 border-t border-muted">
+    <p class="text-gray-500">&copy; 2025 Jacob Ramirez. All rights reserved.</p>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    if (typeof AOS !== 'undefined') {
+      AOS.init();
+    }
+  </script>
+</body>
+</html>
