@@ -10,12 +10,23 @@ title: Home
 
 <section id="about" data-aos="fade-up" class="py-12">
   <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+
+  <p class="text-gray-300 leading-relaxed mb-4">
+    I’m a SCADA Developer with a B.S. in Computer Science and over 10 years of hands-on experience architecting industrial IIoT solutions. I specialize in:
+  </p>
+
+  <ul class="text-gray-300 leading-relaxed list-disc list-inside mb-4">
+    <li><strong>Unified MQTT Namespace & SparkplugB:</strong> Designing scalable, topic-driven frameworks for real-time data distribution.</li>
+    <li><strong>Ignition SCADA:</strong> Ignition Gold Certified—building two-server deployments on Azure & AWS with secure OT/IT segmentation.</li>
+    <li><strong>Custom Python Telemetry:</strong> Developing Modbus-to-MQTT gateways with buffering, deadband logic, and automated KPI dashboards.</li>
+    <li><strong>Resilient Networking:</strong> Deploying and managing 100+ Peplink MAX routers for cellular-backed remote access, with API-driven health monitoring.</li>
+  </ul>
+
   <p class="text-gray-300 leading-relaxed">
-    I'm a SCADA Developer with a Computer Science background, specializing in building industrial IIoT systems that connect
-    field operations to enterprise-level insights. I focus on scalable architectures with MQTT Unified Namespace, Ignition SCADA,
-    custom Python-based telemetry solutions, and deploying resilient networking with Peplink routers and remote cellular solutions.
+    I’m passionate about continuous improvement—currently pursuing Peplink Certified Engineer, contributing to open-source IIoT tools, and sharing insights on modern automation architectures.
   </p>
 </section>
+
 
 <section id="projects" data-aos="fade-up" class="py-12">
   <h2 class="text-3xl font-semibold mb-8">Projects</h2>
