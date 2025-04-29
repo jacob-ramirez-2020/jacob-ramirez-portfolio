@@ -1,10 +1,12 @@
 module.exports = function(eleventyConfig) {
-  // Copy your generated favicon files into the root of public/
-  eleventyConfig.addPassthroughCopy("favicon_io");
+  // Copy everything in favicon_io/ directly into the output root
+  eleventyConfig.addPassthroughCopy({
+    "favicon_io": "."   // the dot here means “output these files into public/”
+  });
 
-  // Copy your JS, CSS, and PDF
-  eleventyConfig.addPassthroughCopy({"static/js": "js"});
-  eleventyConfig.addPassthroughCopy({"static/css": "css"});
+  // your other passthroughs…
+  eleventyConfig.addPassthroughCopy({ "static/js": "js" });
+  eleventyConfig.addPassthroughCopy({ "static/css": "css" });
   eleventyConfig.addPassthroughCopy({
     "static/Jacob_Ramirez_Resume_2025.pdf": "Jacob_Ramirez_Resume_2025.pdf"
   });
