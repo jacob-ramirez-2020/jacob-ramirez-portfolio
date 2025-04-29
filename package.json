@@ -2,13 +2,13 @@
   "name": "jacob-ramirez-portfolio",
   "version": "1.0.0",
   "scripts": {
-    "build:css": "node ./node_modules/postcss-cli/bin/postcss \"src/styles/style.css\" -o \"static/css/style.css\" --verbose",
-    "build": "npm run build:css && eleventy --output=public",
-    "start": "npm run build:css && eleventy --serve",
-    "dev": "npm run build:css && eleventy --serve",
-    "check:links": "linkinator ./public --recursive --silent",
-    "postinstall": "npm install -g @11ty/eleventy"
-  },
+  "build": "eleventy --output=public",
+  "start": "eleventy --serve",
+  "dev":   "eleventy --serve",
+  "check:links": "linkinator ./public --recursive --silent",
+  "postinstall": "npm install -g @11ty/eleventy"
+},
+
   
   "dependencies": {
     "postcss-cli":   "^11.0.1",
