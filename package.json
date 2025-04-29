@@ -2,10 +2,10 @@
   "name": "jacob-ramirez-portfolio",
   "version": "1.0.0",
   "scripts": {
-    "build:css": "postcss src/styles/style.css  -o static/css/style.css --verbose",
+    "build:css": "npx postcss \"src/styles/style.css\" -o \"static/css/style.css\" --verbose",
+    "build":     "npm run build:css && eleventy --output=public",
     "start": "npm run build:css && eleventy --serve",
     "dev": "npm run build:css && eleventy --serve",
-    "build": "npm run build:css && eleventy --output=public",
     "check:links": "linkinator ./public --recursive --silent",
     "postinstall": "npm install -g @11ty/eleventy"
   },
