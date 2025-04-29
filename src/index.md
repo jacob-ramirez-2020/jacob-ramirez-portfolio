@@ -12,19 +12,14 @@ title: Home
   <h2 class="text-3xl font-semibold mb-4">About Me</h2>
 
   <p class="text-gray-300 leading-relaxed mb-4">
-    I’m a SCADA Developer with a B.S. in Computer Science and over 10 years of hands-on experience architecting industrial IIoT solutions. I specialize in:
-  </p>
+    Hi, I'm Jacob Ramirez — SCADA Developer and IIoT Architect.
 
-  <ul class="text-gray-300 leading-relaxed list-disc list-inside mb-4">
-    <li><strong>Unified MQTT Namespace & SparkplugB:</strong> Designing scalable, topic-driven frameworks for real-time data distribution.</li>
-    <li><strong>Ignition SCADA:</strong> Ignition Gold Certified—building two-server deployments on Azure & AWS with secure OT/IT segmentation.</li>
-    <li><strong>Custom Python Telemetry:</strong> Developing Modbus-to-MQTT gateways with buffering, deadband logic, and automated KPI dashboards.</li>
-    <li><strong>Resilient Networking:</strong> Deploying and managing 100+ Peplink MAX routers for cellular-backed remote access, with API-driven health monitoring.</li>
-  </ul>
-
-  <p class="text-gray-300 leading-relaxed">
-I’m passionate about continuous improvement—currently pursuing Peplink Certified Engineer, contributing to open-source IIoT tools, and sharing insights on modern automation architectures.
+    I specialize in building next-generation industrial systems that are scalable, secure, and future-ready. With a foundation in Computer Science and a decade of experience in automation, networking, and cloud integration, I deliver solutions that bridge field operations and enterprise systems with cutting-edge technologies like MQTT UNS and IIoT edge devices.
   </p>
+  <br>
+  <p class="text-gray-300 leading-relaxed"><b>
+  I'm always building, always learning, always improving.
+  </b></p>
 </section>
 
 
