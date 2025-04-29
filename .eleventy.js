@@ -1,4 +1,6 @@
 module.exports = function(eleventyConfig) {
+  // copy everything in src/favicon_io/ straight to the _output_ root
+  eleventyConfig.addPassthroughCopy({ "src/favicon_io": "/" });
   // Passthrough static folders to public
   eleventyConfig.addPassthroughCopy({ "static/js": "js" });
   eleventyConfig.addPassthroughCopy({ "static/css": "css" });
@@ -12,7 +14,9 @@ module.exports = function(eleventyConfig) {
   return {
     dir: {
       input: "src",
-      output: "public"   // <-- important: output into public now
+      includes: "_includes",    // this is the default, but set it explicitly
+      data: "_data",            // if you have a _data folder
+      output: "public"
     }
   };
 };
