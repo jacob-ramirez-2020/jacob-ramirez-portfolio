@@ -1,10 +1,17 @@
 module.exports = function(eleventyConfig) {
-  // Copy everything in favicon_io/ directly into the output root
+  // Copy each favicon file into the output root
   eleventyConfig.addPassthroughCopy({
-    "favicon_io": "."   // the dot here means “output these files into public/”
+    "favicon_io/apple-touch-icon.png":      "apple-touch-icon.png",
+    "favicon_io/favicon-32x32.png":         "favicon-32x32.png",
+    "favicon_io/favicon-16x16.png":         "favicon-16x16.png",
+    "favicon_io/favicon.ico":               "favicon.ico",
+    "favicon_io/site.webmanifest":          "site.webmanifest",
+    "favicon_io/safari-pinned-tab.svg":     "safari-pinned-tab.svg",
+    "favicon_io/browserconfig.xml":         "browserconfig.xml",
+    "favicon_io/mstile-150x150.png":        "mstile-150x150.png"
   });
 
-  // your other passthroughs…
+  // Your other passthroughs…
   eleventyConfig.addPassthroughCopy({ "static/js": "js" });
   eleventyConfig.addPassthroughCopy({ "static/css": "css" });
   eleventyConfig.addPassthroughCopy({
@@ -13,10 +20,10 @@ module.exports = function(eleventyConfig) {
 
   return {
     dir: {
-      input: "src",
+      input:  "src",
       includes: "_includes",
-      data: "_data",
-      output: "public"
+      data:     "_data",
+      output:   "public"
     }
   };
 };
