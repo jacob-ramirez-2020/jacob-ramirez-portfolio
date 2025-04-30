@@ -12,7 +12,7 @@ tags:
   - Programming Jobs
   - Computer Science
 category: "Career"
-date: "2025-04-30"
+date: "2025-04-29"
 ---
 
 <section class="py-12" data-aos="fade-up">
@@ -64,11 +64,3 @@ date: "2025-04-30"
     Until next time, continue coding.
   </p>
 </section>
-
-<p class="mt-12 text-sm text-gray-400">
-  Want to learn how I build MQTT-based SCADA architectures or KPIs in Python? 
-  <a href="/blogs/mqtt-kpi-sparkplugb" class="text-primary underline">Check out my next post →</a>
-</p>
-<p class="mt-8 text-lg text-primary font-semibold">
-  Curious how you can transition into automation? <a href="/contact" class="underline">Let’s connect</a> or follow along on <a href="https://www.linkedin.com/in/jacobramirez-11420194/" target="_blank" class="underline">LinkedIn</a>.
-</p>

@@ -10,6 +10,22 @@ module.exports = function(eleventyConfig) {
     "favicon_io/browserconfig.xml":         "browserconfig.xml",
     "favicon_io/mstile-150x150.png":        "mstile-150x150.png"
   });
+  
+  eleventyConfig.addCollection("blog", function (collection) {
+    return collection
+      .getFilteredByGlob("./src/blogs/*.md")
+      .filter(item => !item.inputPath.endsWith("/index.md"))
+      .reverse();
+  });
+  
+  eleventyConfig.addCollection("latestBlog", function (collection) {
+    return collection
+      .getFilteredByGlob("./src/blogs/*.md")
+      .filter(item => !item.inputPath.endsWith("/index.md"))
+      .reverse()
+      .slice(0, 4);
+  });
+  
 
   // Your other passthroughs…
   eleventyConfig.addPassthroughCopy({ "static/js": "js" });
