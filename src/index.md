@@ -48,7 +48,7 @@ title: Home
   <h2 class="text-3xl font-semibold mb-4">Latest Blog</h2>
   <ul>
     <li class="flex justify-between items-center">
-      <a href="/blogs/blog-0/" class="text-primary font-bold hover:underline">
+      <a href="/blogs/computer-science-to-scada/" class="text-primary font-bold hover:underline">
         Computer Science Grad to SCADA Programmer
       </a>
       <span class="text-gray-400 text-sm">Published: 2025</span>
