@@ -46,15 +46,16 @@ title: Home
 
 <section id="blog" data-aos="fade-up" class="py-12">
   <h2 class="text-3xl font-semibold mb-4">Latest Blog</h2>
-  <ul>
-    <li class="flex justify-between items-center">
-      <a href="/blogs/computer-science-to-scada/" class="text-primary font-bold hover:underline">
-        Computer Science Grad to SCADA Programmer
+  <div class="space-y-6">
+    <div>
+      <h3 class="text-2xl text-primary font-bold">Computer Science Grad to SCADA Programmer</h3>
+      <p class="text-gray-400">A personal story about how I transitioned from a CS graduate in a small Texas town to building large-scale SCADA systems using Ignition, MQTT, and IIoT tools in oil & gas.</p>
+      <a href="/blogs/computer-science-to-scada/" class="inline-block mt-4 px-6 py-2 bg-primary text-black font-bold rounded hover:bg-accent transition">
+        Read Blog Post
       </a>
-      <span class="text-gray-400 text-sm">Published: 2025</span>
-    </li>
-  </ul>
-  <a href="/blogs/" class="inline-block mt-4 text-accent hover:underline">View All Blog Posts →</a>
+    </div>
+  </div>
+  <a href="/blogs/" class="inline-block mt-6 text-accent hover:underline">View All Blog Posts →</a>
 </section>
 
 <section id="resume" data-aos="fade-up" class="py-12">
