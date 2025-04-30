@@ -18,7 +18,7 @@ title: About Me
       <li>Focused on building scalable, secure, future-proof solutions</li>
     </ul>
   </p>
-
+  <br>
   <p class="text-gray-300 mb-6 leading-relaxed">
     With a background in Computer Science and over a decade of hands-on experience in automation, networking, and remote monitoring, I specialize in bridging the gap between field operations and enterprise systems.
     My expertise spans SCADA design, MQTT Unified Namespace architectures, custom IIoT device development, cloud deployments (Azure/AWS), and full-stack project management from concept to rollout.
@@ -33,7 +33,7 @@ title: About Me
       <li>Designed with future expansion in mind</li>
     </ul>
   </p>
-
+  <br>
   <p class="text-gray-300 mb-6 leading-relaxed">
     My goal is simple:<br/>
     <strong>Deliver real-world solutions that empower industrial companies to work smarter, adapt faster, and scale easier.</strong>
