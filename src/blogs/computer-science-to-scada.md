@@ -16,8 +16,10 @@ date: "2025-04-30"
 ---
 
 <section class="py-12" data-aos="fade-up">
-  <h1 class="text-4xl font-bold mb-8 text-primary">Computer Science Grad to SCADA Programmer</h1>
-
+  <h1 class="text-4xl font-bold mb-2 text-primary">{{ title }}</h1>
+  <p class="text-sm text-gray-400 mb-8">
+    Published on {{ page.date | date('MMMM D, YYYY') }}
+  </p>
   <p class="text-gray-300 mb-6 leading-relaxed">
     I want to share a bit of my background — how I went from earning a degree in Computer Science to becoming a SCADA programmer in the world of industrial automation. My goal is also to shine a light on career paths for developers that go beyond the mainstream tech industry — paths that don’t involve building mobile apps or social platforms, but are just as impactful and full of opportunity.
   </p>
