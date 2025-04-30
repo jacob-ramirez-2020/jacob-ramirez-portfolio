@@ -8,7 +8,7 @@ title: Blog
 
   <ul class="space-y-6">
     <li>
-      <a href="/blogs/blog-0/" class="text-2xl text-accent font-semibold hover:underline">Computer Science Grad to SCADA Programmer</a>
+      <a href="/blogs/computer-science-to-scada/" class="text-2xl text-accent font-semibold hover:underline">Computer Science Grad to SCADA Programmer</a>
       <p class="text-gray-400 text-sm">Published: 2025</p>
     </li>
   </ul>
